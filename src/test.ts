@@ -20,7 +20,7 @@ export function runTest() {
     .then(() => process.exit(127));
 
 
-    async function runBrokenParallelTransactions(trx: Knex.Transaction): Promise<any> {
+    function runBrokenParallelTransactions(trx: Knex.Transaction): Promise<any> {
         let results: any[] = [];
 
         return new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ export function runTest() {
                     console.error("runBrokenParallelTransactions: Promise has already been resolved/rejected. X" + resolveRejectCount);
                 }
                 console.error("runBrokenParallelTransactions: Rejecting with ", v);
-                resolve(v);
+                reject(v);
             }
 
             (trx as any).transaction((trx2: Knex.Transaction) => {
