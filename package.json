@@ -1,0 +1,23 @@
+{
+  "name": "KnexJS-Unexpected-Transaction-Behavior",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build && npm run start:last-build",
+    "start:last-build": "node ./index",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "npm run build && node ./src/test"
+  },
+  "dependencies": {
+    "@types/knex": "^0.0.41",
+    "@types/node": "^6.0.54",
+    "@types/pg": "^6.1.34",
+    "knex": "^0.12.7",
+    "pg": "^6.1.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "typescript": "2.2.x"
+  }
+}

@@ -1,0 +1,27 @@
+# Generated Files
+/index.js
+/index.js.map
+/src/**/*.js
+/src/**/*.js.map
+
+# Downloaded Node / NPM / Typescript
+/node_modules/
+
+## Typings
+/typings/*
+!/typings/custom
+
+# Project Files
+/.idea
+
+# Dumps and Logs
+.ntvs_analysis.dat*
+*.stackdump
+npm-debug.log
+npm-debug.log.*
+/obj/
+/bin/
+/logs/
+/logs/error
+src/app/temp_uploads/
+debug.log
